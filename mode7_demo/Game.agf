@@ -22,7 +22,7 @@
       <CompressSpritesType>None</CompressSpritesType>
       <CrossfadeMusic>No</CrossfadeMusic>
       <CustomDataDir IsNull="True" />
-      <CustomResolution>320,200</CustomResolution>
+      <CustomResolution>320,180</CustomResolution>
       <DebugMode>True</DebugMode>
       <DefaultRoomMaskResolution>1</DefaultRoomMaskResolution>
       <Description />
@@ -668,18 +668,18 @@
               <BackgroundColor>0</BackgroundColor>
               <BackgroundImage>1</BackgroundImage>
               <BorderColor>0</BorderColor>
-              <Clickable>True</Clickable>
-              <Height>30</Height>
+              <Clickable>False</Clickable>
+              <Height>216</Height>
               <ID>0</ID>
-              <Left>146</Left>
-              <Name>gMario</Name>
+              <Left>0</Left>
+              <Name>gScreen</Name>
               <OnClick />
               <PopupStyle>Normal</PopupStyle>
               <PopupYPos>0</PopupYPos>
-              <Top>125</Top>
+              <Top>0</Top>
               <Transparency>0</Transparency>
-              <Visible>False</Visible>
-              <Width>28</Width>
+              <Visible>True</Visible>
+              <Width>320</Width>
               <ZOrder>0</ZOrder>
             </NormalGUI>
             <Controls />
@@ -690,7 +690,7 @@
               <BackgroundImage>0</BackgroundImage>
               <BorderColor>0</BorderColor>
               <Clickable>True</Clickable>
-              <Height>10</Height>
+              <Height>9</Height>
               <ID>1</ID>
               <Left>0</Left>
               <Name>gGui1</Name>
@@ -708,7 +708,7 @@
                 <Clickable>True</Clickable>
                 <Enabled>True</Enabled>
                 <Font>0</Font>
-                <Height>8</Height>
+                <Height>7</Height>
                 <ID>0</ID>
                 <Left>2</Left>
                 <Locked>False</Locked>
@@ -716,7 +716,7 @@
                 <Text />
                 <TextAlignment>Left</TextAlignment>
                 <TextColor>65535</TextColor>
-                <Top>1</Top>
+                <Top>0</Top>
                 <Visible>True</Visible>
                 <Width>314</Width>
                 <ZOrder>0</ZOrder>
@@ -1885,13 +1885,13 @@
           <SpriteFolder Name="BG">
             <SubFolders />
             <Sprites>
-              <Sprite Slot="43" Width="960" Height="1024" ColorDepth="32" Resolution="Real" AlphaChannel="False">
+              <Sprite Slot="43" Width="1024" Height="1024" ColorDepth="32" Resolution="Real" AlphaChannel="False">
                 <Source>
                   <FileName>Sprites/Background/bgwater_00.png</FileName>
                   <OffsetX>0</OffsetX>
                   <OffsetY>0</OffsetY>
                   <ImportHeight>1024</ImportHeight>
-                  <ImportWidth>960</ImportWidth>
+                  <ImportWidth>1024</ImportWidth>
                   <ImportAsTile>False</ImportAsTile>
                   <Frame>0</Frame>
                   <RemapToGamePalette>False</RemapToGamePalette>
@@ -1900,13 +1900,13 @@
                   <ImportAlphaChannel>False</ImportAlphaChannel>
                 </Source>
               </Sprite>
-              <Sprite Slot="44" Width="960" Height="1024" ColorDepth="32" Resolution="Real" AlphaChannel="False">
+              <Sprite Slot="44" Width="1024" Height="1024" ColorDepth="32" Resolution="Real" AlphaChannel="False">
                 <Source>
                   <FileName>Sprites/Background/bgwater_01.png</FileName>
                   <OffsetX>0</OffsetX>
                   <OffsetY>0</OffsetY>
                   <ImportHeight>1024</ImportHeight>
-                  <ImportWidth>960</ImportWidth>
+                  <ImportWidth>1024</ImportWidth>
                   <ImportAsTile>False</ImportAsTile>
                   <Frame>0</Frame>
                   <RemapToGamePalette>False</RemapToGamePalette>
@@ -1915,13 +1915,13 @@
                   <ImportAlphaChannel>False</ImportAlphaChannel>
                 </Source>
               </Sprite>
-              <Sprite Slot="45" Width="960" Height="1024" ColorDepth="32" Resolution="Real" AlphaChannel="False">
+              <Sprite Slot="45" Width="1024" Height="1024" ColorDepth="32" Resolution="Real" AlphaChannel="False">
                 <Source>
                   <FileName>Sprites/Background/bgwater_02.png</FileName>
                   <OffsetX>0</OffsetX>
                   <OffsetY>0</OffsetY>
                   <ImportHeight>1024</ImportHeight>
-                  <ImportWidth>960</ImportWidth>
+                  <ImportWidth>1024</ImportWidth>
                   <ImportAsTile>False</ImportAsTile>
                   <Frame>0</Frame>
                   <RemapToGamePalette>False</RemapToGamePalette>
@@ -1930,13 +1930,13 @@
                   <ImportAlphaChannel>False</ImportAlphaChannel>
                 </Source>
               </Sprite>
-              <Sprite Slot="46" Width="960" Height="1024" ColorDepth="32" Resolution="Real" AlphaChannel="False">
+              <Sprite Slot="46" Width="1024" Height="1024" ColorDepth="32" Resolution="Real" AlphaChannel="False">
                 <Source>
                   <FileName>Sprites/Background/bgwater_03.png</FileName>
                   <OffsetX>0</OffsetX>
                   <OffsetY>0</OffsetY>
                   <ImportHeight>1024</ImportHeight>
-                  <ImportWidth>960</ImportWidth>
+                  <ImportWidth>1024</ImportWidth>
                   <ImportAsTile>False</ImportAsTile>
                   <Frame>0</Frame>
                   <RemapToGamePalette>False</RemapToGamePalette>
@@ -1945,13 +1945,13 @@
                   <ImportAlphaChannel>False</ImportAlphaChannel>
                 </Source>
               </Sprite>
-              <Sprite Slot="47" Width="960" Height="1024" ColorDepth="32" Resolution="Real" AlphaChannel="False">
+              <Sprite Slot="47" Width="1024" Height="1024" ColorDepth="32" Resolution="Real" AlphaChannel="False">
                 <Source>
                   <FileName>Sprites/Background/bgwater_04.png</FileName>
                   <OffsetX>0</OffsetX>
                   <OffsetY>0</OffsetY>
                   <ImportHeight>1024</ImportHeight>
-                  <ImportWidth>960</ImportWidth>
+                  <ImportWidth>1024</ImportWidth>
                   <ImportAsTile>False</ImportAsTile>
                   <Frame>0</Frame>
                   <RemapToGamePalette>False</RemapToGamePalette>
@@ -1960,13 +1960,13 @@
                   <ImportAlphaChannel>False</ImportAlphaChannel>
                 </Source>
               </Sprite>
-              <Sprite Slot="48" Width="960" Height="1024" ColorDepth="32" Resolution="Real" AlphaChannel="False">
+              <Sprite Slot="48" Width="1024" Height="1024" ColorDepth="32" Resolution="Real" AlphaChannel="False">
                 <Source>
                   <FileName>Sprites/Background/bgwater_05.png</FileName>
                   <OffsetX>0</OffsetX>
                   <OffsetY>0</OffsetY>
                   <ImportHeight>1024</ImportHeight>
-                  <ImportWidth>960</ImportWidth>
+                  <ImportWidth>1024</ImportWidth>
                   <ImportAsTile>False</ImportAsTile>
                   <Frame>0</Frame>
                   <RemapToGamePalette>False</RemapToGamePalette>
@@ -1975,13 +1975,13 @@
                   <ImportAlphaChannel>False</ImportAlphaChannel>
                 </Source>
               </Sprite>
-              <Sprite Slot="49" Width="960" Height="1024" ColorDepth="32" Resolution="Real" AlphaChannel="False">
+              <Sprite Slot="49" Width="1024" Height="1024" ColorDepth="32" Resolution="Real" AlphaChannel="False">
                 <Source>
                   <FileName>Sprites/Background/bgwater_06.png</FileName>
                   <OffsetX>0</OffsetX>
                   <OffsetY>0</OffsetY>
                   <ImportHeight>1024</ImportHeight>
-                  <ImportWidth>960</ImportWidth>
+                  <ImportWidth>1024</ImportWidth>
                   <ImportAsTile>False</ImportAsTile>
                   <Frame>0</Frame>
                   <RemapToGamePalette>False</RemapToGamePalette>
@@ -1990,13 +1990,13 @@
                   <ImportAlphaChannel>False</ImportAlphaChannel>
                 </Source>
               </Sprite>
-              <Sprite Slot="50" Width="960" Height="1024" ColorDepth="32" Resolution="Real" AlphaChannel="False">
+              <Sprite Slot="50" Width="1024" Height="1024" ColorDepth="32" Resolution="Real" AlphaChannel="False">
                 <Source>
                   <FileName>Sprites/Background/bgwater_07.png</FileName>
                   <OffsetX>0</OffsetX>
                   <OffsetY>0</OffsetY>
                   <ImportHeight>1024</ImportHeight>
-                  <ImportWidth>960</ImportWidth>
+                  <ImportWidth>1024</ImportWidth>
                   <ImportAsTile>False</ImportAsTile>
                   <Frame>0</Frame>
                   <RemapToGamePalette>False</RemapToGamePalette>
@@ -2005,13 +2005,13 @@
                   <ImportAlphaChannel>False</ImportAlphaChannel>
                 </Source>
               </Sprite>
-              <Sprite Slot="51" Width="960" Height="1024" ColorDepth="32" Resolution="Real" AlphaChannel="False">
+              <Sprite Slot="51" Width="1024" Height="1024" ColorDepth="32" Resolution="Real" AlphaChannel="False">
                 <Source>
                   <FileName>Sprites/Background/bgwater_08.png</FileName>
                   <OffsetX>0</OffsetX>
                   <OffsetY>0</OffsetY>
                   <ImportHeight>1024</ImportHeight>
-                  <ImportWidth>960</ImportWidth>
+                  <ImportWidth>1024</ImportWidth>
                   <ImportAsTile>False</ImportAsTile>
                   <Frame>0</Frame>
                   <RemapToGamePalette>False</RemapToGamePalette>
@@ -2020,13 +2020,13 @@
                   <ImportAlphaChannel>False</ImportAlphaChannel>
                 </Source>
               </Sprite>
-              <Sprite Slot="52" Width="960" Height="1024" ColorDepth="32" Resolution="Real" AlphaChannel="False">
+              <Sprite Slot="52" Width="1024" Height="1024" ColorDepth="32" Resolution="Real" AlphaChannel="False">
                 <Source>
                   <FileName>Sprites/Background/bgwater_09.png</FileName>
                   <OffsetX>0</OffsetX>
                   <OffsetY>0</OffsetY>
                   <ImportHeight>1024</ImportHeight>
-                  <ImportWidth>960</ImportWidth>
+                  <ImportWidth>1024</ImportWidth>
                   <ImportAsTile>False</ImportAsTile>
                   <Frame>0</Frame>
                   <RemapToGamePalette>False</RemapToGamePalette>
@@ -2035,13 +2035,13 @@
                   <ImportAlphaChannel>False</ImportAlphaChannel>
                 </Source>
               </Sprite>
-              <Sprite Slot="53" Width="960" Height="1024" ColorDepth="32" Resolution="Real" AlphaChannel="False">
+              <Sprite Slot="53" Width="1024" Height="1024" ColorDepth="32" Resolution="Real" AlphaChannel="False">
                 <Source>
                   <FileName>Sprites/Background/bgwater_10.png</FileName>
                   <OffsetX>0</OffsetX>
                   <OffsetY>0</OffsetY>
                   <ImportHeight>1024</ImportHeight>
-                  <ImportWidth>960</ImportWidth>
+                  <ImportWidth>1024</ImportWidth>
                   <ImportAsTile>False</ImportAsTile>
                   <Frame>0</Frame>
                   <RemapToGamePalette>False</RemapToGamePalette>
@@ -2050,13 +2050,13 @@
                   <ImportAlphaChannel>False</ImportAlphaChannel>
                 </Source>
               </Sprite>
-              <Sprite Slot="54" Width="960" Height="1024" ColorDepth="32" Resolution="Real" AlphaChannel="False">
+              <Sprite Slot="54" Width="1024" Height="1024" ColorDepth="32" Resolution="Real" AlphaChannel="False">
                 <Source>
                   <FileName>Sprites/Background/bgwater_11.png</FileName>
                   <OffsetX>0</OffsetX>
                   <OffsetY>0</OffsetY>
                   <ImportHeight>1024</ImportHeight>
-                  <ImportWidth>960</ImportWidth>
+                  <ImportWidth>1024</ImportWidth>
                   <ImportAsTile>False</ImportAsTile>
                   <Frame>0</Frame>
                   <RemapToGamePalette>False</RemapToGamePalette>
@@ -2065,13 +2065,13 @@
                   <ImportAlphaChannel>False</ImportAlphaChannel>
                 </Source>
               </Sprite>
-              <Sprite Slot="55" Width="960" Height="1024" ColorDepth="32" Resolution="Real" AlphaChannel="False">
+              <Sprite Slot="55" Width="1024" Height="1024" ColorDepth="32" Resolution="Real" AlphaChannel="False">
                 <Source>
                   <FileName>Sprites/Background/bgwater_12.png</FileName>
                   <OffsetX>0</OffsetX>
                   <OffsetY>0</OffsetY>
                   <ImportHeight>1024</ImportHeight>
-                  <ImportWidth>960</ImportWidth>
+                  <ImportWidth>1024</ImportWidth>
                   <ImportAsTile>False</ImportAsTile>
                   <Frame>0</Frame>
                   <RemapToGamePalette>False</RemapToGamePalette>
@@ -2080,13 +2080,13 @@
                   <ImportAlphaChannel>False</ImportAlphaChannel>
                 </Source>
               </Sprite>
-              <Sprite Slot="56" Width="960" Height="1024" ColorDepth="32" Resolution="Real" AlphaChannel="False">
+              <Sprite Slot="56" Width="1024" Height="1024" ColorDepth="32" Resolution="Real" AlphaChannel="False">
                 <Source>
                   <FileName>Sprites/Background/bgwater_13.png</FileName>
                   <OffsetX>0</OffsetX>
                   <OffsetY>0</OffsetY>
                   <ImportHeight>1024</ImportHeight>
-                  <ImportWidth>960</ImportWidth>
+                  <ImportWidth>1024</ImportWidth>
                   <ImportAsTile>False</ImportAsTile>
                   <Frame>0</Frame>
                   <RemapToGamePalette>False</RemapToGamePalette>
@@ -2095,13 +2095,13 @@
                   <ImportAlphaChannel>False</ImportAlphaChannel>
                 </Source>
               </Sprite>
-              <Sprite Slot="57" Width="960" Height="1024" ColorDepth="32" Resolution="Real" AlphaChannel="False">
+              <Sprite Slot="57" Width="1024" Height="1024" ColorDepth="32" Resolution="Real" AlphaChannel="False">
                 <Source>
                   <FileName>Sprites/Background/bgwater_14.png</FileName>
                   <OffsetX>0</OffsetX>
                   <OffsetY>0</OffsetY>
                   <ImportHeight>1024</ImportHeight>
-                  <ImportWidth>960</ImportWidth>
+                  <ImportWidth>1024</ImportWidth>
                   <ImportAsTile>False</ImportAsTile>
                   <Frame>0</Frame>
                   <RemapToGamePalette>False</RemapToGamePalette>
@@ -2110,13 +2110,13 @@
                   <ImportAlphaChannel>False</ImportAlphaChannel>
                 </Source>
               </Sprite>
-              <Sprite Slot="58" Width="960" Height="1024" ColorDepth="32" Resolution="Real" AlphaChannel="False">
+              <Sprite Slot="58" Width="1024" Height="1024" ColorDepth="32" Resolution="Real" AlphaChannel="False">
                 <Source>
                   <FileName>Sprites/Background/bgwater_15.png</FileName>
                   <OffsetX>0</OffsetX>
                   <OffsetY>0</OffsetY>
                   <ImportHeight>1024</ImportHeight>
-                  <ImportWidth>960</ImportWidth>
+                  <ImportWidth>1024</ImportWidth>
                   <ImportAsTile>False</ImportAsTile>
                   <Frame>0</Frame>
                   <RemapToGamePalette>False</RemapToGamePalette>
@@ -2125,13 +2125,13 @@
                   <ImportAlphaChannel>False</ImportAlphaChannel>
                 </Source>
               </Sprite>
-              <Sprite Slot="59" Width="960" Height="1024" ColorDepth="32" Resolution="Real" AlphaChannel="False">
+              <Sprite Slot="59" Width="1024" Height="1024" ColorDepth="32" Resolution="Real" AlphaChannel="False">
                 <Source>
                   <FileName>Sprites/Background/bgwater_16.png</FileName>
                   <OffsetX>0</OffsetX>
                   <OffsetY>0</OffsetY>
                   <ImportHeight>1024</ImportHeight>
-                  <ImportWidth>960</ImportWidth>
+                  <ImportWidth>1024</ImportWidth>
                   <ImportAsTile>False</ImportAsTile>
                   <Frame>0</Frame>
                   <RemapToGamePalette>False</RemapToGamePalette>
@@ -2140,13 +2140,13 @@
                   <ImportAlphaChannel>False</ImportAlphaChannel>
                 </Source>
               </Sprite>
-              <Sprite Slot="60" Width="960" Height="1024" ColorDepth="32" Resolution="Real" AlphaChannel="False">
+              <Sprite Slot="60" Width="1024" Height="1024" ColorDepth="32" Resolution="Real" AlphaChannel="False">
                 <Source>
                   <FileName>Sprites/Background/bgwater_17.png</FileName>
                   <OffsetX>0</OffsetX>
                   <OffsetY>0</OffsetY>
                   <ImportHeight>1024</ImportHeight>
-                  <ImportWidth>960</ImportWidth>
+                  <ImportWidth>1024</ImportWidth>
                   <ImportAsTile>False</ImportAsTile>
                   <Frame>0</Frame>
                   <RemapToGamePalette>False</RemapToGamePalette>
@@ -2155,13 +2155,13 @@
                   <ImportAlphaChannel>False</ImportAlphaChannel>
                 </Source>
               </Sprite>
-              <Sprite Slot="61" Width="960" Height="1024" ColorDepth="32" Resolution="Real" AlphaChannel="False">
+              <Sprite Slot="61" Width="1024" Height="1024" ColorDepth="32" Resolution="Real" AlphaChannel="False">
                 <Source>
                   <FileName>Sprites/Background/bgwater_18.png</FileName>
                   <OffsetX>0</OffsetX>
                   <OffsetY>0</OffsetY>
                   <ImportHeight>1024</ImportHeight>
-                  <ImportWidth>960</ImportWidth>
+                  <ImportWidth>1024</ImportWidth>
                   <ImportAsTile>False</ImportAsTile>
                   <Frame>0</Frame>
                   <RemapToGamePalette>False</RemapToGamePalette>
@@ -2170,13 +2170,13 @@
                   <ImportAlphaChannel>False</ImportAlphaChannel>
                 </Source>
               </Sprite>
-              <Sprite Slot="62" Width="960" Height="1024" ColorDepth="32" Resolution="Real" AlphaChannel="False">
+              <Sprite Slot="62" Width="1024" Height="1024" ColorDepth="32" Resolution="Real" AlphaChannel="False">
                 <Source>
                   <FileName>Sprites/Background/bgwater_19.png</FileName>
                   <OffsetX>0</OffsetX>
                   <OffsetY>0</OffsetY>
                   <ImportHeight>1024</ImportHeight>
-                  <ImportWidth>960</ImportWidth>
+                  <ImportWidth>1024</ImportWidth>
                   <ImportAsTile>False</ImportAsTile>
                   <Frame>0</Frame>
                   <RemapToGamePalette>False</RemapToGamePalette>
@@ -2185,13 +2185,13 @@
                   <ImportAlphaChannel>False</ImportAlphaChannel>
                 </Source>
               </Sprite>
-              <Sprite Slot="63" Width="960" Height="1024" ColorDepth="32" Resolution="Real" AlphaChannel="False">
+              <Sprite Slot="63" Width="1024" Height="1024" ColorDepth="32" Resolution="Real" AlphaChannel="False">
                 <Source>
                   <FileName>Sprites/Background/bgwater_20.png</FileName>
                   <OffsetX>0</OffsetX>
                   <OffsetY>0</OffsetY>
                   <ImportHeight>1024</ImportHeight>
-                  <ImportWidth>960</ImportWidth>
+                  <ImportWidth>1024</ImportWidth>
                   <ImportAsTile>False</ImportAsTile>
                   <Frame>0</Frame>
                   <RemapToGamePalette>False</RemapToGamePalette>
@@ -2633,21 +2633,7 @@
         <SubFolders>
           <AudioClipFolder Name="Music">
             <SubFolders />
-            <AudioClips>
-              <AudioClip>
-                <BundlingType>InSeparateVOX</BundlingType>
-                <DefaultPriority>Inherit</DefaultPriority>
-                <DefaultRepeat>Inherit</DefaultRepeat>
-                <DefaultVolume>-1</DefaultVolume>
-                <FileType>MIDI</FileType>
-                <ID>0</ID>
-                <Index>1</Index>
-                <ScriptName>aSMK_Mario_Circuit</ScriptName>
-                <SourceFileName>D:\AGS\AGS321\AGSKart_old_two_modes\Stuff\SMK_Mario_Circuit.mid</SourceFileName>
-                <Type>2</Type>
-                <FileLastModifiedDate>2012-04-26 02:25:04Z</FileLastModifiedDate>
-              </AudioClip>
-            </AudioClips>
+            <AudioClips />
             <AudioClipFolder>
               <DefaultBundlingType>InGameEXE</DefaultBundlingType>
               <DefaultPriority>Inherit</DefaultPriority>
