@@ -7,21 +7,29 @@ enum eCameraTargetType {
 };
 
 managed struct Obj {
+  /// Object World X Position
   float X;
+  /// Object World Y Position
   float Y;
+  /// Object World Z Position
   float Z;
+  /// Object graphic scale
   float Factor;
+  /// Object graphic
   int Graphic;
   
+  /// On-Screen Object X position when drawing, if visible
   int ScreenX;
+  /// On-Screen Object Y position when drawing, if visible
   int ScreenY;
+  /// On-Screen Object Width when drawing, if visible
   int ScreenWidth;
+  /// On-Screen Object Height when drawing, if visible
   int ScreenHeight;
+  /// If object should be drawn on screen
   bool ScreenVisible;
+  /// ZOrder of the object when drawing on screen, smaller numbers are below, bigger numbers are on top
   int ScreenZOrder;
-  
-  float _RelX;
-  float _RelY;
 };
 
 struct Mode7 {
