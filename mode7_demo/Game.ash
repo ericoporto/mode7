@@ -1,3 +1,3 @@
 // new module header
 
-import Mode7 m7;
+import Mode7World m7;

@@ -29,28 +29,17 @@ struct Mode7 {
   import void SetViewscreen(int x, int y, int width, int height);
   import void SetGroundSprite(int ground_graphic);
   import void SetHorizonSprite(int horizon_graphic);
-  import void AddObject(int x, int z, float factor, int slot);
   import void SetBgColor(int bg_color);
+  import void SetSkyColor(int sky_color);
   
   import void TargetCamera(float target_x, float target_y, float target_z, float teta_angle, eCameraTargetType camType = eCameraTarget_Behind);
-  import void UpdateObjects();
   import void Draw();
-  
-  import void SetObj(int slot, float x, float y, float z);
   
   import void DebugKeyPress(eKeyCode k);
   
   // screen 
-  writeprotected DynamicSprite* Screen;
+  writeprotected DynamicSprite* Screen;  
   
-  
-  
-  // objects    
-  Obj* Object [MAX_OBJECTS];
-  writeprotected int ObjectCount;  
-  writeprotected int ObjectScreenVisibleCount;
-  writeprotected int ObjectScreenVisibleOrder[MAX_OBJECTS];
-  writeprotected int ObjectScreenVisibleID[MAX_OBJECTS];
   
   // EVERYTHING BELOW IS INTERNAL TO THE STRUCT AND YOU DON'T NEED TO TOUCH ///
   
@@ -67,6 +56,7 @@ struct Mode7 {
   
   // view screen
   protected int _bg_color;
+  protected int _sky_color;
   protected int _screen_x, _screen_y, _screen_width, _screen_height;
   
   protected int _track_canvas_size;
@@ -88,9 +78,26 @@ struct Mode7 {
   protected DynamicSprite* _empty;
     
   // private methods
+  import protected void _DrawGroundSprites(DrawingSurface* ds, float cam_y, int angle, int ox, int oy);
   import protected void _CameraTrack(eCameraTargetType camType, float target_x, float target_y, float target_z,  float teta_angle);
-  import protected void _DrawTrackObjects(DrawingSurface* ds, float cam_y, int angle, int ox, int oy);
   import protected void _DrawTrack3D();
   import protected void _GenerateTrackSprite();
+};
+
+struct Mode7World extends Mode7 {
+  import void AddObject(int x, int z, float factor, int slot);
+  import void UpdateObjects();
+  import void SetObj(int slot, float x, float y, float z);
+  import void DrawWorld();
+    
+  
+  // objects
+  Obj* Objects [MAX_OBJECTS];
+  writeprotected int ObjectCount;  
+  writeprotected int ObjectScreenVisibleCount;
+  writeprotected int ObjectScreenVisibleOrder[MAX_OBJECTS];
+  writeprotected int ObjectScreenVisibleID[MAX_OBJECTS];
+
+  // private methods
   import protected void _DrawObjects();
 };

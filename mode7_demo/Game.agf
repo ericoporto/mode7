@@ -699,7 +699,7 @@
               <PopupYPos>0</PopupYPos>
               <Top>0</Top>
               <Transparency>40</Transparency>
-              <Visible>True</Visible>
+              <Visible>False</Visible>
               <Width>320</Width>
               <ZOrder>0</ZOrder>
             </NormalGUI>
