@@ -30,6 +30,7 @@ struct Mode7 {
   import void SetGroundSprite(int ground_graphic);
   import void SetHorizonSprite(int horizon_graphic);
   import void AddObject(int x, int z, float factor, int slot);
+  import void SetBgColor(int bg_color);
   
   import void TargetCamera(float target_x, float target_y, float target_z, float teta_angle, eCameraTargetType camType = eCameraTarget_Behind);
   import void UpdateObjects();
@@ -41,6 +42,7 @@ struct Mode7 {
   
   // screen 
   writeprotected DynamicSprite* Screen;
+  
   
   
   // objects    
@@ -64,6 +66,7 @@ struct Mode7 {
   protected int _track_angle;
   
   // view screen
+  protected int _bg_color;
   protected int _screen_x, _screen_y, _screen_width, _screen_height;
   
   protected int _track_canvas_size;
