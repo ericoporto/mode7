@@ -1393,163 +1393,7 @@
       <SpriteFolder Name="Main">
         <SubFolders>
           <SpriteFolder Name="Players">
-            <SubFolders>
-              <SpriteFolder Name="Mario">
-                <SubFolders />
-                <Sprites>
-                  <Sprite Slot="8" Width="32" Height="32" ColorDepth="32" Resolution="Real" AlphaChannel="False">
-                    <Source>
-                      <FileName />
-                      <OffsetX>0</OffsetX>
-                      <OffsetY>0</OffsetY>
-                      <ImportHeight>32</ImportHeight>
-                      <ImportWidth>32</ImportWidth>
-                      <ImportAsTile>False</ImportAsTile>
-                      <Frame>0</Frame>
-                      <RemapToGamePalette>False</RemapToGamePalette>
-                      <RemapToRoomPalette>False</RemapToRoomPalette>
-                      <ImportMethod>LeaveAsIs</ImportMethod>
-                      <ImportAlphaChannel>False</ImportAlphaChannel>
-                    </Source>
-                  </Sprite>
-                  <Sprite Slot="9" Width="32" Height="32" ColorDepth="32" Resolution="Real" AlphaChannel="False">
-                    <Source>
-                      <FileName>D:\AGS\AGS321\AGSKart_32bit\Stuff\02.png</FileName>
-                      <OffsetX>0</OffsetX>
-                      <OffsetY>0</OffsetY>
-                      <ImportHeight>32</ImportHeight>
-                      <ImportWidth>32</ImportWidth>
-                      <ImportAsTile>False</ImportAsTile>
-                      <Frame>0</Frame>
-                      <RemapToGamePalette>False</RemapToGamePalette>
-                      <RemapToRoomPalette>False</RemapToRoomPalette>
-                      <ImportMethod>LeaveAsIs</ImportMethod>
-                      <ImportAlphaChannel>False</ImportAlphaChannel>
-                    </Source>
-                  </Sprite>
-                  <Sprite Slot="10" Width="32" Height="32" ColorDepth="32" Resolution="Real" AlphaChannel="False">
-                    <Source>
-                      <FileName>D:\AGS\AGS321\AGSKart_32bit\Stuff\03.png</FileName>
-                      <OffsetX>0</OffsetX>
-                      <OffsetY>0</OffsetY>
-                      <ImportHeight>32</ImportHeight>
-                      <ImportWidth>32</ImportWidth>
-                      <ImportAsTile>False</ImportAsTile>
-                      <Frame>0</Frame>
-                      <RemapToGamePalette>False</RemapToGamePalette>
-                      <RemapToRoomPalette>False</RemapToRoomPalette>
-                      <ImportMethod>LeaveAsIs</ImportMethod>
-                      <ImportAlphaChannel>False</ImportAlphaChannel>
-                    </Source>
-                  </Sprite>
-                  <Sprite Slot="11" Width="32" Height="32" ColorDepth="32" Resolution="Real" AlphaChannel="False">
-                    <Source>
-                      <FileName>D:\AGS\AGS321\AGSKart_32bit\Stuff\04.png</FileName>
-                      <OffsetX>0</OffsetX>
-                      <OffsetY>0</OffsetY>
-                      <ImportHeight>32</ImportHeight>
-                      <ImportWidth>32</ImportWidth>
-                      <ImportAsTile>False</ImportAsTile>
-                      <Frame>0</Frame>
-                      <RemapToGamePalette>False</RemapToGamePalette>
-                      <RemapToRoomPalette>False</RemapToRoomPalette>
-                      <ImportMethod>LeaveAsIs</ImportMethod>
-                      <ImportAlphaChannel>False</ImportAlphaChannel>
-                    </Source>
-                  </Sprite>
-                  <Sprite Slot="12" Width="32" Height="32" ColorDepth="32" Resolution="Real" AlphaChannel="False">
-                    <Source>
-                      <FileName>D:\AGS\AGS321\AGSKart_32bit\Stuff\05.png</FileName>
-                      <OffsetX>0</OffsetX>
-                      <OffsetY>0</OffsetY>
-                      <ImportHeight>32</ImportHeight>
-                      <ImportWidth>32</ImportWidth>
-                      <ImportAsTile>False</ImportAsTile>
-                      <Frame>0</Frame>
-                      <RemapToGamePalette>False</RemapToGamePalette>
-                      <RemapToRoomPalette>False</RemapToRoomPalette>
-                      <ImportMethod>LeaveAsIs</ImportMethod>
-                      <ImportAlphaChannel>False</ImportAlphaChannel>
-                    </Source>
-                  </Sprite>
-                  <Sprite Slot="13" Width="32" Height="32" ColorDepth="32" Resolution="Real" AlphaChannel="False">
-                    <Source>
-                      <FileName>D:\AGS\AGS321\AGSKart_32bit\Stuff\06.png</FileName>
-                      <OffsetX>0</OffsetX>
-                      <OffsetY>0</OffsetY>
-                      <ImportHeight>32</ImportHeight>
-                      <ImportWidth>32</ImportWidth>
-                      <ImportAsTile>False</ImportAsTile>
-                      <Frame>0</Frame>
-                      <RemapToGamePalette>False</RemapToGamePalette>
-                      <RemapToRoomPalette>False</RemapToRoomPalette>
-                      <ImportMethod>LeaveAsIs</ImportMethod>
-                      <ImportAlphaChannel>False</ImportAlphaChannel>
-                    </Source>
-                  </Sprite>
-                  <Sprite Slot="14" Width="32" Height="32" ColorDepth="32" Resolution="Real" AlphaChannel="False">
-                    <Source>
-                      <FileName>D:\AGS\AGS321\AGSKart_32bit\Stuff\07.png</FileName>
-                      <OffsetX>0</OffsetX>
-                      <OffsetY>0</OffsetY>
-                      <ImportHeight>32</ImportHeight>
-                      <ImportWidth>32</ImportWidth>
-                      <ImportAsTile>False</ImportAsTile>
-                      <Frame>0</Frame>
-                      <RemapToGamePalette>False</RemapToGamePalette>
-                      <RemapToRoomPalette>False</RemapToRoomPalette>
-                      <ImportMethod>LeaveAsIs</ImportMethod>
-                      <ImportAlphaChannel>False</ImportAlphaChannel>
-                    </Source>
-                  </Sprite>
-                  <Sprite Slot="15" Width="32" Height="32" ColorDepth="32" Resolution="Real" AlphaChannel="False">
-                    <Source>
-                      <FileName>D:\AGS\AGS321\AGSKart_32bit\Stuff\08.png</FileName>
-                      <OffsetX>0</OffsetX>
-                      <OffsetY>0</OffsetY>
-                      <ImportHeight>32</ImportHeight>
-                      <ImportWidth>32</ImportWidth>
-                      <ImportAsTile>False</ImportAsTile>
-                      <Frame>0</Frame>
-                      <RemapToGamePalette>False</RemapToGamePalette>
-                      <RemapToRoomPalette>False</RemapToRoomPalette>
-                      <ImportMethod>LeaveAsIs</ImportMethod>
-                      <ImportAlphaChannel>False</ImportAlphaChannel>
-                    </Source>
-                  </Sprite>
-                  <Sprite Slot="16" Width="32" Height="32" ColorDepth="32" Resolution="Real" AlphaChannel="False">
-                    <Source>
-                      <FileName>D:\AGS\AGS321\AGSKart_32bit\Stuff\09.png</FileName>
-                      <OffsetX>0</OffsetX>
-                      <OffsetY>0</OffsetY>
-                      <ImportHeight>32</ImportHeight>
-                      <ImportWidth>32</ImportWidth>
-                      <ImportAsTile>False</ImportAsTile>
-                      <Frame>0</Frame>
-                      <RemapToGamePalette>False</RemapToGamePalette>
-                      <RemapToRoomPalette>False</RemapToRoomPalette>
-                      <ImportMethod>LeaveAsIs</ImportMethod>
-                      <ImportAlphaChannel>False</ImportAlphaChannel>
-                    </Source>
-                  </Sprite>
-                  <Sprite Slot="17" Width="32" Height="32" ColorDepth="32" Resolution="Real" AlphaChannel="False">
-                    <Source>
-                      <FileName>D:\AGS\AGS321\AGSKart_32bit\Stuff\10.png</FileName>
-                      <OffsetX>0</OffsetX>
-                      <OffsetY>0</OffsetY>
-                      <ImportHeight>32</ImportHeight>
-                      <ImportWidth>32</ImportWidth>
-                      <ImportAsTile>False</ImportAsTile>
-                      <Frame>0</Frame>
-                      <RemapToGamePalette>False</RemapToGamePalette>
-                      <RemapToRoomPalette>False</RemapToRoomPalette>
-                      <ImportMethod>LeaveAsIs</ImportMethod>
-                      <ImportAlphaChannel>False</ImportAlphaChannel>
-                    </Source>
-                  </Sprite>
-                </Sprites>
-              </SpriteFolder>
-            </SubFolders>
+            <SubFolders />
             <Sprites />
           </SpriteFolder>
           <SpriteFolder Name="Objects">
@@ -2240,6 +2084,21 @@
                   <ImportAlphaChannel>True</ImportAlphaChannel>
                 </Source>
               </Sprite>
+              <Sprite Slot="24" Width="64" Height="45" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>Sprites/things/water_splash.png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>45</ImportHeight>
+                  <ImportWidth>64</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>False</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>LeaveAsIs</ImportMethod>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
             </Sprites>
           </SpriteFolder>
         </SubFolders>
@@ -2259,88 +2118,13 @@
               <ImportAlphaChannel>False</ImportAlphaChannel>
             </Source>
           </Sprite>
-          <Sprite Slot="1" Width="28" Height="36" ColorDepth="32" Resolution="Real" AlphaChannel="False">
+          <Sprite Slot="1" Width="47" Height="53" ColorDepth="32" Resolution="Real" AlphaChannel="False">
             <Source>
-              <FileName />
+              <FileName>Sprites/things/isle.png</FileName>
               <OffsetX>0</OffsetX>
               <OffsetY>0</OffsetY>
-              <ImportHeight>36</ImportHeight>
-              <ImportWidth>28</ImportWidth>
-              <ImportAsTile>False</ImportAsTile>
-              <Frame>0</Frame>
-              <RemapToGamePalette>False</RemapToGamePalette>
-              <RemapToRoomPalette>False</RemapToRoomPalette>
-              <ImportMethod>LeaveAsIs</ImportMethod>
-              <ImportAlphaChannel>False</ImportAlphaChannel>
-            </Source>
-          </Sprite>
-          <Sprite Slot="2" Width="38" Height="36" ColorDepth="32" Resolution="Real" AlphaChannel="False">
-            <Source>
-              <FileName />
-              <OffsetX>0</OffsetX>
-              <OffsetY>0</OffsetY>
-              <ImportHeight>36</ImportHeight>
-              <ImportWidth>38</ImportWidth>
-              <ImportAsTile>False</ImportAsTile>
-              <Frame>0</Frame>
-              <RemapToGamePalette>False</RemapToGamePalette>
-              <RemapToRoomPalette>False</RemapToRoomPalette>
-              <ImportMethod>LeaveAsIs</ImportMethod>
-              <ImportAlphaChannel>False</ImportAlphaChannel>
-            </Source>
-          </Sprite>
-          <Sprite Slot="4" Width="784" Height="40" ColorDepth="32" Resolution="Real" AlphaChannel="False">
-            <Source>
-              <FileName />
-              <OffsetX>0</OffsetX>
-              <OffsetY>0</OffsetY>
-              <ImportHeight>40</ImportHeight>
-              <ImportWidth>784</ImportWidth>
-              <ImportAsTile>False</ImportAsTile>
-              <Frame>0</Frame>
-              <RemapToGamePalette>False</RemapToGamePalette>
-              <RemapToRoomPalette>False</RemapToRoomPalette>
-              <ImportMethod>LeaveAsIs</ImportMethod>
-              <ImportAlphaChannel>False</ImportAlphaChannel>
-            </Source>
-          </Sprite>
-          <Sprite Slot="5" Width="24" Height="30" ColorDepth="32" Resolution="Real" AlphaChannel="False">
-            <Source>
-              <FileName>D:\AGS\AGS321\AGSKart_old_two_modes\Stuff\Super Mario Kart (U)_00002.png</FileName>
-              <OffsetX>0</OffsetX>
-              <OffsetY>0</OffsetY>
-              <ImportHeight>30</ImportHeight>
-              <ImportWidth>24</ImportWidth>
-              <ImportAsTile>False</ImportAsTile>
-              <Frame>0</Frame>
-              <RemapToGamePalette>False</RemapToGamePalette>
-              <RemapToRoomPalette>False</RemapToRoomPalette>
-              <ImportMethod>LeaveAsIs</ImportMethod>
-              <ImportAlphaChannel>False</ImportAlphaChannel>
-            </Source>
-          </Sprite>
-          <Sprite Slot="6" Width="1024" Height="1024" ColorDepth="32" Resolution="Real" AlphaChannel="False">
-            <Source>
-              <FileName />
-              <OffsetX>0</OffsetX>
-              <OffsetY>0</OffsetY>
-              <ImportHeight>1024</ImportHeight>
-              <ImportWidth>1024</ImportWidth>
-              <ImportAsTile>False</ImportAsTile>
-              <Frame>0</Frame>
-              <RemapToGamePalette>False</RemapToGamePalette>
-              <RemapToRoomPalette>False</RemapToRoomPalette>
-              <ImportMethod>LeaveAsIs</ImportMethod>
-              <ImportAlphaChannel>False</ImportAlphaChannel>
-            </Source>
-          </Sprite>
-          <Sprite Slot="7" Width="800" Height="800" ColorDepth="32" Resolution="Real" AlphaChannel="False">
-            <Source>
-              <FileName>D:\AGS\AGS321\AGSKart_8bit\Stuff\8bit\track.png</FileName>
-              <OffsetX>0</OffsetX>
-              <OffsetY>0</OffsetY>
-              <ImportHeight>800</ImportHeight>
-              <ImportWidth>800</ImportWidth>
+              <ImportHeight>53</ImportHeight>
+              <ImportWidth>47</ImportWidth>
               <ImportAsTile>False</ImportAsTile>
               <Frame>0</Frame>
               <RemapToGamePalette>False</RemapToGamePalette>
@@ -2371,51 +2155,6 @@
               <OffsetY>0</OffsetY>
               <ImportHeight>1024</ImportHeight>
               <ImportWidth>1024</ImportWidth>
-              <ImportAsTile>False</ImportAsTile>
-              <Frame>0</Frame>
-              <RemapToGamePalette>False</RemapToGamePalette>
-              <RemapToRoomPalette>False</RemapToRoomPalette>
-              <ImportMethod>LeaveAsIs</ImportMethod>
-              <ImportAlphaChannel>False</ImportAlphaChannel>
-            </Source>
-          </Sprite>
-          <Sprite Slot="24" Width="32" Height="32" ColorDepth="32" Resolution="Real" AlphaChannel="False">
-            <Source>
-              <FileName />
-              <OffsetX>0</OffsetX>
-              <OffsetY>0</OffsetY>
-              <ImportHeight>32</ImportHeight>
-              <ImportWidth>32</ImportWidth>
-              <ImportAsTile>False</ImportAsTile>
-              <Frame>0</Frame>
-              <RemapToGamePalette>False</RemapToGamePalette>
-              <RemapToRoomPalette>False</RemapToRoomPalette>
-              <ImportMethod>LeaveAsIs</ImportMethod>
-              <ImportAlphaChannel>False</ImportAlphaChannel>
-            </Source>
-          </Sprite>
-          <Sprite Slot="25" Width="70" Height="49" ColorDepth="32" Resolution="Real" AlphaChannel="False">
-            <Source>
-              <FileName />
-              <OffsetX>0</OffsetX>
-              <OffsetY>0</OffsetY>
-              <ImportHeight>49</ImportHeight>
-              <ImportWidth>70</ImportWidth>
-              <ImportAsTile>False</ImportAsTile>
-              <Frame>0</Frame>
-              <RemapToGamePalette>False</RemapToGamePalette>
-              <RemapToRoomPalette>False</RemapToRoomPalette>
-              <ImportMethod>LeaveAsIs</ImportMethod>
-              <ImportAlphaChannel>False</ImportAlphaChannel>
-            </Source>
-          </Sprite>
-          <Sprite Slot="26" Width="800" Height="800" ColorDepth="32" Resolution="Real" AlphaChannel="False">
-            <Source>
-              <FileName />
-              <OffsetX>0</OffsetX>
-              <OffsetY>0</OffsetY>
-              <ImportHeight>800</ImportHeight>
-              <ImportWidth>800</ImportWidth>
               <ImportAsTile>False</ImportAsTile>
               <Frame>0</Frame>
               <RemapToGamePalette>False</RemapToGamePalette>

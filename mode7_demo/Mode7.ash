@@ -51,7 +51,7 @@ struct Mode7 {
   import void SetBgColor(int bg_color);
   import void SetSkyColor(int sky_color);
   
-  import void TargetCamera(float target_x, float target_y, float target_z, float teta_angle, eCameraTargetType camType = eCameraTarget_FollowBehind);
+  import void TargetCamera(float target_x, float target_y, float target_z, float teta_angle, eCameraTargetType camType = eCameraTarget_FollowBehind, bool is_lazy = true);
   import void Draw();
   
   import void DebugKeyPress(eKeyCode k);
@@ -99,7 +99,6 @@ struct Mode7 {
     
   // private methods
   import protected void _DrawGroundSprites(DrawingSurface* ds, float cam_y, int angle, int ox, int oy);
-  import protected void _CameraTrack(eCameraTargetType camType, float target_x, float target_y, float target_z,  float teta_angle);
   import protected void _DrawTrack3D();
   import protected void _GenerateTrackSprite();
 };
@@ -108,6 +107,7 @@ struct Mode7World extends Mode7 {
   import void AddObject(int x, int z, float factor, int graphic);
   import int GetAngleObjectAndCamera(int object_id);
   import void UpdateObjects();
+  import void DrawObjects();
   import void DrawWorld();
     
   
@@ -117,7 +117,4 @@ struct Mode7World extends Mode7 {
   writeprotected int ObjectScreenVisibleCount;
   writeprotected int ObjectScreenVisibleOrder[MAX_OBJECTS];
   writeprotected int ObjectScreenVisibleID[MAX_OBJECTS];
-
-  // private methods
-  import protected void _DrawObjects();
 };
