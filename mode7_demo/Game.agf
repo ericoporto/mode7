@@ -666,7 +666,7 @@
           <GUIMain>
             <NormalGUI>
               <BackgroundColor>0</BackgroundColor>
-              <BackgroundImage>1</BackgroundImage>
+              <BackgroundImage>0</BackgroundImage>
               <BorderColor>0</BorderColor>
               <Clickable>False</Clickable>
               <Height>216</Height>
