@@ -2556,54 +2556,6 @@
           <ScriptAndHeader>
             <ScriptAndHeader_Header>
               <Script>
-                <FileName>Game.ash</FileName>
-                <Name />
-                <Description />
-                <Author />
-                <Version />
-                <Key>1231281105</Key>
-                <IsHeader>True</IsHeader>
-              </Script>
-            </ScriptAndHeader_Header>
-            <ScriptAndHeader_Script>
-              <Script>
-                <FileName>Game.asc</FileName>
-                <Name />
-                <Description />
-                <Author />
-                <Version />
-                <Key>1231281105</Key>
-                <IsHeader>False</IsHeader>
-              </Script>
-            </ScriptAndHeader_Script>
-          </ScriptAndHeader>
-          <ScriptAndHeader>
-            <ScriptAndHeader_Header>
-              <Script>
-                <FileName>input.ash</FileName>
-                <Name />
-                <Description />
-                <Author />
-                <Version />
-                <Key>1910876876</Key>
-                <IsHeader>True</IsHeader>
-              </Script>
-            </ScriptAndHeader_Header>
-            <ScriptAndHeader_Script>
-              <Script>
-                <FileName>input.asc</FileName>
-                <Name />
-                <Description />
-                <Author />
-                <Version />
-                <Key>1910876876</Key>
-                <IsHeader>False</IsHeader>
-              </Script>
-            </ScriptAndHeader_Script>
-          </ScriptAndHeader>
-          <ScriptAndHeader>
-            <ScriptAndHeader_Header>
-              <Script>
                 <FileName>GlobalScript.ash</FileName>
                 <Name />
                 <Description />
