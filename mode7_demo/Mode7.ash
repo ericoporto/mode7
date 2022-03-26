@@ -22,6 +22,8 @@ managed struct Obj {
   float Factor;
   /// Object graphic
   int Graphic;
+  /// Object angle, not used for rendering
+  float Angle;
   
   /// On-Screen Object X position when drawing, if visible
   int ScreenX;
@@ -35,8 +37,10 @@ managed struct Obj {
   bool ScreenVisible;
   /// ZOrder of the object when drawing on screen, smaller numbers are below, bigger numbers are on top
   int ScreenZOrder;
-  
+    
   import void SetPosition(float x, float y, float z);
+  
+  import void Draw(DrawingSurface* ds);
 };
 
 struct Mode7 {
@@ -102,6 +106,7 @@ struct Mode7 {
 
 struct Mode7World extends Mode7 {
   import void AddObject(int x, int z, float factor, int graphic);
+  import int GetAngleObjectAndCamera(int object_id);
   import void UpdateObjects();
   import void DrawWorld();
     
