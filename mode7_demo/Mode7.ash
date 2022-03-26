@@ -35,6 +35,8 @@ managed struct Obj {
   bool ScreenVisible;
   /// ZOrder of the object when drawing on screen, smaller numbers are below, bigger numbers are on top
   int ScreenZOrder;
+  
+  import void SetPosition(float x, float y, float z);
 };
 
 struct Mode7 {
@@ -99,9 +101,8 @@ struct Mode7 {
 };
 
 struct Mode7World extends Mode7 {
-  import void AddObject(int x, int z, float factor, int slot);
+  import void AddObject(int x, int z, float factor, int graphic);
   import void UpdateObjects();
-  import void SetObj(int slot, float x, float y, float z);
   import void DrawWorld();
     
   
