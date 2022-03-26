@@ -38,20 +38,31 @@ managed struct Obj {
   /// ZOrder of the object when drawing on screen, smaller numbers are below, bigger numbers are on top
   int ScreenZOrder;
     
+  /// Set's the object position
   import void SetPosition(float x, float y, float z);
   
+  /// Draw the object in a DrawingSurface as it would look in a screen
   import void Draw(DrawingSurface* ds);
 };
 
 struct Mode7 {
+  /// Sets the camera position, angle and focal length
   import void SetCamera(float x, float y, float z, float xa, float ya, float focal_length);
+  /// Sets the screen area it will draw in
   import void SetViewscreen(int x, int y, int width, int height);
+  /// Sets the ground sprite, this is the mode7 rendered sprite
   import void SetGroundSprite(int ground_graphic);
+  /// Sets a sprite that will roll around in the horizon, you can also make it static
   import void SetHorizonSprite(int horizon_graphic, eHorizonType = eHorizonDynamic);
+  /// Sets the color of the background where the ground sprite doesn't reach
   import void SetBgColor(int bg_color);
+  /// Sets the color of the sky
   import void SetSkyColor(int sky_color);
   
+  /// Target the camera to something
   import void TargetCamera(float target_x, float target_y, float target_z, float teta_angle, eCameraTargetType camType = eCameraTarget_FollowBehind, bool is_lazy = true);
+  
+  /// Draws the ground sprite and horizon rendered in the Screen sprite
   import void Draw();
   
   import void DebugKeyPress(eKeyCode k);
