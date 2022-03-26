@@ -2,8 +2,13 @@
 #define MAX_OBJECTS 100
 
 enum eCameraTargetType {
-  eCameraTarget_Behind, 
-  eCameraTarget_Sides, 
+  eCameraTarget_FollowBehind,
+  eCameraTarget_Sides,
+};
+
+enum eHorizonType {
+  eHorizonStatic = 0,
+  eHorizonDynamic = 1,
 };
 
 managed struct Obj {
@@ -36,11 +41,11 @@ struct Mode7 {
   import void SetCamera(float x, float y, float z, float xa, float ya, float focal_length);
   import void SetViewscreen(int x, int y, int width, int height);
   import void SetGroundSprite(int ground_graphic);
-  import void SetHorizonSprite(int horizon_graphic);
+  import void SetHorizonSprite(int horizon_graphic, eHorizonType = eHorizonDynamic);
   import void SetBgColor(int bg_color);
   import void SetSkyColor(int sky_color);
   
-  import void TargetCamera(float target_x, float target_y, float target_z, float teta_angle, eCameraTargetType camType = eCameraTarget_Behind);
+  import void TargetCamera(float target_x, float target_y, float target_z, float teta_angle, eCameraTargetType camType = eCameraTarget_FollowBehind);
   import void Draw();
   
   import void DebugKeyPress(eKeyCode k);
@@ -80,6 +85,7 @@ struct Mode7 {
   protected float _prev_camera_angle_y;
 
   // track
+  protected bool _is_horizon_dynamic;
   protected int _track_sprite_slot, _horizon_sprite_slot;
   protected DynamicSprite* _track_sprite;
   protected DynamicSprite* _ground_3d;
