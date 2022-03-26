@@ -6,6 +6,24 @@ enum eCameraTargetType {
   eCameraTarget_Sides, 
 };
 
+managed struct Obj {
+  float X;
+  float Y;
+  float Z;
+  float Factor;
+  int Graphic;
+  
+  int ScreenX;
+  int ScreenY;
+  int ScreenWidth;
+  int ScreenHeight;
+  bool ScreenVisible;
+  int ScreenZOrder;
+  
+  float _RelX;
+  float _RelY;
+};
+
 struct Mode7 {
   import void SetCamera(float x, float y, float z, float xa, float ya, float focal_length);
   import void SetViewscreen(int x, int y, int width, int height);
@@ -14,11 +32,23 @@ struct Mode7 {
   import void AddObject(int x, int z, float factor, int slot);
   
   import void TargetCamera(float target_x, float target_y, float target_z, float teta_angle, eCameraTargetType camType = eCameraTarget_Behind);
+  import void UpdateObjects();
   import void Draw();
   
   import void SetObj(int slot, float x, float y, float z);
   
   import void DebugKeyPress(eKeyCode k);
+  
+  // screen 
+  writeprotected DynamicSprite* Screen;
+  
+  
+  // objects    
+  Obj* Object [MAX_OBJECTS];
+  writeprotected int ObjectCount;  
+  writeprotected int ObjectScreenVisibleCount;
+  writeprotected int ObjectScreenVisibleOrder[MAX_OBJECTS];
+  writeprotected int ObjectScreenVisibleID[MAX_OBJECTS];
   
   // EVERYTHING BELOW IS INTERNAL TO THE STRUCT AND YOU DON'T NEED TO TOUCH ///
   
@@ -39,22 +69,21 @@ struct Mode7 {
   protected int _track_canvas_size;
   // camera position on track_canvas below center
   protected int _track_canvas_y_offset;
-  
+
+  // things to remember to avoid redrawing
+  protected int _prev_ground_sprite_slot;
+  protected float _prev_camera_position_x;
+  protected float _prev_camera_position_y;
+  protected float _prev_camera_position_z;
+  protected float _prev_camera_angle_x;
+  protected float _prev_camera_angle_y;
+
   // track
   protected int _track_sprite_slot, _horizon_sprite_slot;
   protected DynamicSprite* _track_sprite;
-  
-  // objects
-  protected Overlay* _obj_ovr[MAX_OBJECTS];
-  protected float _obj_x[MAX_OBJECTS];
-  protected float _obj_y[MAX_OBJECTS];
-  protected float _obj_z[MAX_OBJECTS];
-  protected float _obj_factor[MAX_OBJECTS];
-  protected int _obj_graphic[MAX_OBJECTS];
-  protected int _obj_prev_graphic[MAX_OBJECTS];
-  protected int _obj_order[MAX_OBJECTS];
-  protected int _obj_count;  
-  
+  protected DynamicSprite* _ground_3d;
+  protected DynamicSprite* _empty;
+    
   // private methods
   import protected void _CameraTrack(eCameraTargetType camType, float target_x, float target_y, float target_z,  float teta_angle);
   import protected void _DrawTrackObjects(DrawingSurface* ds, float cam_y, int angle, int ox, int oy);
