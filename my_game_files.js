@@ -1,0 +1,1 @@
+var gamefiles = ['Mode7_Demo.ags', 'acsetup.cfg'];
