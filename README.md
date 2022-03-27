@@ -80,8 +80,104 @@ DynamicSprite* Mode7.Screen
 
 The Dynamic Sprite that represents the screen where the Mode7 ground is draw to.
 
+---
+
 
 ### Mode7World
+
+#### `Mode7World.AddObject`
+```
+Obj* Mode7World.AddObject(int x, int z, float factor, int graphic)
+```
+
+Adds an object, and sets it's x and z position. The y (vertical position) is always zero. You also must pass a scale factor and it's graphics.
+
+
+#### `Mode7World.RemoveObject`
+```
+void Mode7World.RemoveObject(int object_i = -1)
+```
+
+Remove a specific object from the world by it's index. If you don't pass a value, it will remove the last valid object added.
+
+
+#### `Mode7World.RemoveAllsObjects`
+```
+void Mode7World.RemoveAllsObjects()
+```
+
+Removes all objects from the Mode7 World.
+
+
+#### `Mode7World.GetAngleObjectAndCamera`
+```
+int Mode7World.GetAngleObjectAndCamera(int object_i)
+```
+
+Returns the angle in degrees between the camera and whatever angle is set to a specific object, pointed by their index.
+Useful when you want to change the graphic of an object based on their relative angle.
+
+
+#### `Mode7World.UpdateObjects`
+```
+void Mode7World.UpdateObjects()
+```
+
+Update the screen transform of all objects world positions to their screen positions. You must call it before drawing any objects!
+
+
+#### `Mode7World.DrawObjects`
+```
+void Mode7World.DrawObjects()
+```
+
+Draws only the objects in the screen sprite. You can use when you need to draw additional things between the ground and the objects. 
+Or when you don't need the ground at all.
+
+
+#### `Mode7World.DrawWorld`
+```
+void Mode7World.DrawWorld()
+```
+
+Draws the ground sprite and the objects over it, in the screen sprite.
+
+
+#### `Mode7World.Objects`
+```
+writeprotected Obj* Mode7World.Objects[i]
+```
+
+Let's you access a specific object in the mode7 world by it's index. Make sure to access a valid position.
+
+
+#### `Mode7World.ObjectCount`
+```
+writeprotected int Mode7World.ObjectCount
+```
+
+Gets how many objects are currently in the mode7 world.
+
+
+#### `Mode7World.ObjectScreenVisibleCount`
+```
+writeprotected int Mode7World.ObjectScreenVisibleCount
+```
+
+Gets how many objects are actually visible in the screen.
+
+You can iterate through all the screen objects as follows:
+
+```
+for(int i=0; i < m7w.ObjectScreenVisibleCount; i++)
+{
+  // will make sure to access in order from far to closer
+  int index = m7w.ObjectScreenVisibleID[m7w.ObjectScreenVisibleOrder[i]];
+  Obj* m7object = m7w.Objects[index];
+  
+  // do as you you must with you m7object ...
+}
+```
 
 ---
 
