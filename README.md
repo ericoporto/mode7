@@ -7,7 +7,9 @@ This module allows you to project a sprite on the screen with the visual aspect 
 
 If you want to do more, and also want to have other elements in it, similar to Mario Kart, you can leverage Mode7World and Mode7Object functionalities.
 
-This code is based on original code that was written by Khris and presented in [this ags forum thread](https://www.adventuregamestudio.co.uk/forums/index.php?topic=45834.msg636452606#msg636452606). I asked Khris for the original code, which was very Kart oriented, I refactored to what I thought was more generic and made this module in the hopes people could pick around the code and also help out! A note, the original code was a bit more performant, I pulled some specific optimizations to make the code more flexible.
+This code is based on original code that was written by Khris and presented in [this ags forum thread](https://www.adventuregamestudio.co.uk/forums/index.php?topic=45834.msg636452606#msg636452606). I asked Khris for the original code, which was very Kart oriented, I refactored to what I thought was more generic and made this module in the hopes people could pick around the code and make games out of it! 
+
+A note, the original code was a bit more performant, I pulled out some specific optimizations to make the code more flexible.
 
 ## usage
 
