@@ -181,7 +181,122 @@ for(int i=0; i < m7w.ObjectScreenVisibleCount; i++)
 
 ---
 
-### Obj
+### Mode7Object
+
+A Mode7Object, you should create objects by using Mode7World.AddObject. After world coordinates are set, you can use Mode7World.UpdateObjects to transform it's coordinates and get updated values in it's Screen prefixed properties.
+
+#### `Mode7Object.SetPosition`
+```
+void Mode7Object.SetPosition(float x, float y, float z)
+```
+
+A helper function to setting the Object world position in a single line.
+
+
+#### `Mode7Object.Draw`
+```
+void Mode7Object.Draw(DrawingSurface* ds)
+```
+
+Draw the object in a DrawingSurface as it would look in a screen.
+
+
+#### `Mode7Object.X`
+```
+float Mode7Object.X
+```
+
+Object World X Position on the plane.
+
+
+#### `Mode7Object.Y`
+```
+float Mode7Object.Y
+```
+
+Object World Y Position, perpendicular to plane.
+
+
+#### `Mode7Object.Z`
+```
+float Mode7Object.Z
+```
+
+Object World Z Position, orthogonal to X position.
+
+
+#### `Mode7Object.Factor`
+```
+float Mode7Object.Factor
+```
+
+Object Scaling factor to it's graphics.
+
+
+#### `Mode7Object.Angle`
+```
+float Mode7Object.Angle
+```
+
+Object angle, parallel to plane, not used for rendering.
+
+
+#### `Mode7Object.Graphic`
+```
+int Mode7Object.Graphic
+```
+
+Object sprite slot, it's width and height is used to calculate the screen coordinates.
+
+
+#### `Mode7Object.ScreenX`
+```
+int Mode7Object.ScreenX
+```
+
+On-Screen Object X position when drawing, if visible. It's regular top, left coordinates, similar to GUI, assumes a Graphic is set.
+
+
+#### `Mode7Object.ScreenY`
+```
+int Mode7Object.ScreenY
+```
+
+On-Screen Object Y position when drawing, if visible. It's regular top, left coordinates, similar to GUI, assumes a Graphic is set.
+
+
+#### `Mode7Object.ScreenWidth`
+```
+int Mode7Object.ScreenWidth
+```
+
+On-Screen Object Width when drawing, if visible. It's adjusted by the sprite used in Graphic, projection and scaling factor.
+
+
+#### `Mode7Object.ScreenHeight`
+```
+int Mode7Object.ScreenHeight
+```
+
+On-Screen Object Height when drawing, if visible. It's adjusted by the sprite used in Graphic, projection and scaling factor.
+
+
+#### `Mode7Object.ScreenVisible`
+```
+bool Mode7Object.ScreenVisible
+```
+
+True if object should be drawn on screen. Gets set to false if object is culled when projecting.
+
+
+#### `Mode7Object.ScreenZOrder`
+```
+int Mode7Object.ScreenZOrder
+```
+
+ZOrder of the object when drawing on screen, smaller numbers are below, bigger numbers are on top.
+
+
 
 ---
 
