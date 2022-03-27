@@ -321,3 +321,4 @@ ZOrder of the object when drawing on screen, smaller numbers are below, bigger n
 - Clouds: ansimuz - Sunnyland
 - Water: zabin - The Battle for Wesnoth Water
 - Ship: helianthus games - FREE pixel art Viking ship 16 directions
+  - https://helianthus-games.itch.io/pixel-art-viking-ship-16-directions
