@@ -3,7 +3,7 @@ Adventure Game Studio mode7 script module
 
 <img src="https://user-images.githubusercontent.com/2244442/160260167-0f6ab7a0-fd55-472a-839f-5332f3970476.gif"  alt="mode7 capture" width="640" height="360">
 
-[**See demo in here!**](https://ericoporto.github.io/mode7/)
+[**See demo in here!**](https://ericoporto.github.io/mode7/) (Use Firefox, Safari or Chrome 100+)
 
 This module allows you to project a sprite on the screen with the visual aspect people are familiar from the mode7 graphics of SNES games. Use the Mode7 struct for that!
 
