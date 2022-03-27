@@ -85,6 +85,8 @@ The Dynamic Sprite that represents the screen where the Mode7 ground is draw to.
 
 ### Mode7World
 
+This is an extension of Mode7 and gives you tools to present billboard sprites, positioned in the world coordinates, using the concept of Mode7Objects. You don't have to use it to do the drawing, but it should help you if you want to!
+
 #### `Mode7World.AddObject`
 ```
 Obj* Mode7World.AddObject(int x, int z, float factor, int graphic)
