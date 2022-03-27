@@ -11,7 +11,7 @@ enum eHorizonType {
   eHorizonDynamic = 1,
 };
 
-managed struct Obj {
+managed struct Mode7Object {
   /// Object World X Position
   float X;
   /// Object World Y Position
@@ -115,7 +115,7 @@ struct Mode7 {
 };
 
 struct Mode7World extends Mode7 {
-  import Obj* AddObject(int x, int z, float factor, int graphic);
+  import Mode7Object* AddObject(int x, int z, float factor, int graphic);
   import void RemoveObject(int object_id = -1);
   import void RemoveAllsObjects();
   import int GetAngleObjectAndCamera(int object_id);
@@ -124,7 +124,7 @@ struct Mode7World extends Mode7 {
   import void DrawWorld();
   
   // objects
-  Obj* Objects [MAX_OBJECTS];
+  Mode7Object* Objects [MAX_OBJECTS];
   writeprotected int ObjectCount;  
   writeprotected int ObjectScreenVisibleCount;
   writeprotected int ObjectScreenVisibleOrder[MAX_OBJECTS];
