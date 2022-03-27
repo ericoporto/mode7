@@ -16,7 +16,6 @@ void Mode7.SetCamera(float x, float y, float z, float xa, float ya, float focal_
 
 Sets the camera position, angle and focal length.
 
----
 
 #### `Mode7.SetViewscreen`
 ```
@@ -25,7 +24,6 @@ void Mode7.SetViewscreen(int width, int height, optional int x,  optional int y)
 
 Sets the screen area it will draw in.
 
----
 
 #### `Mode7.SetGroundSprite`
 ```
@@ -34,7 +32,6 @@ void Mode7.SetGroundSprite(int ground_graphic)
 
 Sets the ground sprite, this is the mode7 rendered sprite.
 
----
 
 #### `Mode7.SetHorizonSprite`
 ```
@@ -43,7 +40,6 @@ void Mode7.SetHorizonSprite(int horizon_graphic, eHorizonType = eHorizonDynamic)
 
 Sets a sprite that will roll around in the horizon, you can also make it static.
 
----
 
 #### `Mode7.SetBgColor`
 ```
@@ -52,7 +48,6 @@ void Mode7.SetBgColor(int bg_color)
 
 Sets the color of the background where the ground sprite doesn't reach.
 
----
 
 #### `Mode7.SetSkyColor`
 ```
@@ -61,7 +56,6 @@ void Mode7.SetSkyColor(int sky_color)
 
 Sets the color of the sky.
 
----
 
 #### `Mode7.TargetCamera`
 ```
@@ -70,7 +64,6 @@ void Mode7.TargetCamera(float target_x, float target_y, float target_z, float te
 
 Target the camera to something.
 
----
 
 #### `Mode7.Draw`
 ```
@@ -79,7 +72,6 @@ void Mode7.Draw()
 
 Draws the ground sprite and horizon rendered in the Screen sprite.
 
----
 
 #### `Mode7.Screen`
 ```
@@ -88,7 +80,6 @@ DynamicSprite* Mode7.Screen
 
 The Dynamic Sprite that represents the screen where the Mode7 ground is draw to.
 
----
 
 ### Mode7World
 
