@@ -42,8 +42,8 @@
       <GUIAlphaStyle>AdditiveOpacity</GUIAlphaStyle>
       <GUIDAsString>{4c070ec7-2175-485b-b7ce-f5f9ff1f49a2}</GUIDAsString>
       <GameExplorerEnabled>False</GameExplorerEnabled>
-      <GameFileName>AGSKart_32bit</GameFileName>
-      <GameName xml:space="preserve">AGS Kart</GameName>
+      <GameFileName>Mode7_Demo</GameFileName>
+      <GameName>Mode7_Demo</GameName>
       <GameTextEncoding>ANSI</GameTextEncoding>
       <Genre>Adventure</Genre>
       <GlobalSpeechAnimationDelay>5</GlobalSpeechAnimationDelay>
@@ -67,11 +67,11 @@
       <RoomTransition>FadeOutAndIn</RoomTransition>
       <RunGameLoopsWhileDialogOptionsDisplayed>False</RunGameLoopsWhileDialogOptionsDisplayed>
       <SaveGameFileExtension />
-      <SaveGameFolderName xml:space="preserve">AGS Kart</SaveGameFolderName>
+      <SaveGameFolderName>Mode7_Demo</SaveGameFolderName>
       <SaveScreenshots>False</SaveScreenshots>
       <ScaleMovementSpeedWithMaskResolution>True</ScaleMovementSpeedWithMaskResolution>
       <ScriptAPIVersion>Highest</ScriptAPIVersion>
-      <ScriptCompatLevel>v321</ScriptCompatLevel>
+      <ScriptCompatLevel>Highest</ScriptCompatLevel>
       <SkipSpeech>MouseOrKeyboardOrTimer</SkipSpeech>
       <SpeechPortraitSide>Left</SpeechPortraitSide>
       <SpeechStyle>Lucasarts</SpeechStyle>
@@ -86,8 +86,8 @@
       <UniqueID>41976031</UniqueID>
       <UseGlobalSpeechAnimationDelay>False</UseGlobalSpeechAnimationDelay>
       <UseLowResCoordinatesInScript>False</UseLowResCoordinatesInScript>
-      <UseOldCustomDialogOptionsAPI>True</UseOldCustomDialogOptionsAPI>
-      <UseOldKeyboardHandling>True</UseOldKeyboardHandling>
+      <UseOldCustomDialogOptionsAPI>False</UseOldCustomDialogOptionsAPI>
+      <UseOldKeyboardHandling>False</UseOldKeyboardHandling>
       <Version>1.0.0.0</Version>
       <WalkInLookMode>False</WalkInLookMode>
       <WhenInterfaceDisabled>GreyOut</WhenInterfaceDisabled>
