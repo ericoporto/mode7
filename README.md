@@ -15,6 +15,10 @@ A note, the original code was a bit more performant, I pulled out some specific 
 
 ## Script API
 
+- [Mode7](#mode7-1)
+- [Mode7World](#mode7world)
+- [Mode7Object](#mode7object)
+
 ### Mode7
 
 #### `Mode7.SetCamera`
