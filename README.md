@@ -319,6 +319,7 @@ ZOrder of the object when drawing on screen, smaller numbers are below, bigger n
 ## Demo Graphics copyright
 
 - Clouds: ansimuz - Sunnyland
+  - https://opengameart.org/content/sunny-land-2d-pixel-art-pack
 - Water: zabin - The Battle for Wesnoth Water
   - https://opengameart.org/content/the-battle-for-wesnoth-water-animation
 - Ship: helianthus games - FREE pixel art Viking ship 16 directions
