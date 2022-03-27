@@ -1,0 +1,165 @@
+[size=14pt][b]mode7[/b][/size] [color=gray][b] version 0.1.0 [/b][/color]
+
+[url=https://github.com/ericoporto/mode7/releases/download/0.1.0/mode7.scm]Get Latest Release [b]mode7.scm[/b][/url] | [url=https://github.com/ericoporto/mode7]GitHub Repo[/url] | [url=https://github.com/ericoporto/mode7/releases/download/0.1.0/mode7_demo_windows.zip]Demo Windows[/url] | [url=https://github.com/ericoporto/mode7/releases/download/0.1.0/mode7_demo_linux.tar.gz]Demo Linux[/url] | [url=https://github.com/ericoporto/mode7/archive/0.1.0.zip] Download project .zip [/url]
+
+AGS Script Module for Mode7 like graphics.
+
+[img width=640 height=360]https://user-images.githubusercontent.com/2244442/160260167-0f6ab7a0-fd55-472a-839f-5332f3970476.gif[/img]
+
+[size=14pt][b]Script API[/b][/size]
+[spoiler]
+
+[size=12pt][b]Mode7[/b][/size]
+
+[b][tt]Mode7.SetCamera[/tt][/b]
+[code=ags]void Mode7.SetCamera(float x, float y, float z, float xa, float ya, float focal_length)[/code]
+Sets the camera position, angle and focal length.
+
+[b][tt]Mode7.SetViewscreen[/tt][/b]
+[code=ags]void Mode7.SetViewscreen(int width, int height, optional int x,  optional int y)[/code]
+Sets the screen area it will draw in.
+
+[b][tt]Mode7.SetGroundSprite[/tt][/b]
+[code=ags]void Mode7.SetGroundSprite(int ground_graphic)[/code]
+Sets the ground sprite, this is the mode7 rendered sprite.
+
+[b][tt]Mode7.SetHorizonSprite[/tt][/b]
+[code=ags]void Mode7.SetHorizonSprite(int horizon_graphic, eHorizonType = eHorizonDynamic)[/code]
+Sets a sprite that will roll around in the horizon, you can also make it static.
+
+[b][tt]Mode7.SetBgColor[/tt][/b]
+[code=ags]void Mode7.SetBgColor(int bg_color)[/code]
+Sets the color of the background where the ground sprite doesn't reach.
+
+[b][tt]Mode7.SetSkyColor[/tt][/b]
+[code=ags]void Mode7.SetSkyColor(int sky_color)[/code]
+Sets the color of the sky.
+
+[b][tt]Mode7.TargetCamera[/tt][/b]
+[code=ags]void Mode7.TargetCamera(float target_x, float target_y, float target_z, float teta_angle, eCameraTargetType camType = eCameraTarget_FollowBehind, bool is_lazy = true)[/code]
+Target the camera to something.
+
+[b][tt]Mode7.Draw[/tt][/b]
+[code=ags]void Mode7.Draw()[/code]
+Draws the ground sprite and horizon rendered in the Screen sprite.
+
+[b][tt]Mode7.Screen[/tt][/b]
+[code=ags]DynamicSprite* Mode7.Screen[/code]
+The Dynamic Sprite that represents the screen where the Mode7 ground is draw to.
+[hr]
+
+
+[size=12pt][b]Mode7World[/b][/size]
+This is an extension of Mode7 and gives you tools to present billboard sprites, positioned in the world coordinates, using the concept of Mode7Objects. You don't have to use it to do the drawing, but it should help you if you want to!
+
+[b][tt]Mode7World.AddObject[/tt][/b]
+[code=ags]Mode7Object* Mode7World.AddObject(int x, int z, float factor, int graphic)[/code]
+Adds an object, and sets it's x and z position. The y (vertical position) is always zero. You also must pass a scale factor and it's graphics.
+
+[b][tt]Mode7World.RemoveObject[/tt][/b]
+[code=ags]void Mode7World.RemoveObject(int object_i = -1)[/code]
+Remove a specific object from the world by it's index. If you don't pass a value, it will remove the last valid object added.
+
+[b][tt]Mode7World.RemoveAllsObjects[/tt][/b]
+[code=ags]void Mode7World.RemoveAllsObjects()[/code]
+Removes all objects from the Mode7 World.
+
+[b][tt]Mode7World.GetAngleObjectAndCamera[/tt][/b]
+[code=ags]int Mode7World.GetAngleObjectAndCamera(int object_i)[/code]
+Returns the angle in degrees between the camera and whatever angle is set to a specific object, pointed by their index. Useful when you want to change the graphic of an object based on their relative angle.
+
+[b][tt]Mode7World.UpdateObjects[/tt][/b]
+[code=ags]void Mode7World.UpdateObjects()[/code]
+Update the screen transform of all objects world positions to their screen positions. You must call it before drawing any objects!
+
+[b][tt]Mode7World.DrawObjects[/tt][/b]
+[code=ags]void Mode7World.DrawObjects()[/code]
+Draws only the objects in the screen sprite. You can use when you need to draw additional things between the ground and the objects. Or when you don't need the ground at all.
+
+[b][tt]Mode7World.DrawWorld[/tt][/b]
+[code=ags]void Mode7World.DrawWorld()[/code]
+Draws the ground sprite and the objects over it, in the screen sprite.
+
+[b][tt]Mode7World.Objects[/tt][/b]
+[code=ags]writeprotected Mode7Object* Mode7World.Objects[i][/code]
+Let's you access a specific object in the mode7 world by it's index. Make sure to access a valid position.
+
+[b][tt]Mode7World.ObjectCount[/tt][/b]
+[code=ags]writeprotected int Mode7World.ObjectCount[/code]
+Gets how many objects are currently in the mode7 world.
+
+[b][tt]Mode7World.ObjectScreenVisibleCount[/tt][/b]
+[code=ags]writeprotected int Mode7World.ObjectScreenVisibleCount[/code]
+Gets how many objects are actually visible in the screen.
+
+You can iterate through all the screen objects as follows:
+
+[code=ags]for(int i=0; i < m7w.ObjectScreenVisibleCount; i++)
+{
+  // will make sure to access in order from far to closer
+  int index = m7w.ObjectScreenVisibleID[m7w.ObjectScreenVisibleOrder[i]];
+  Obj* m7object = m7w.Objects[index];
+  
+  // do as you you must with you m7object ...
+}[/code]
+[hr]
+
+
+[size=12pt][b]Mode7Object[/b][/size]
+A Mode7Object, you should create objects by using Mode7World.AddObject. After world coordinates are set, you can use Mode7World.UpdateObjects to transform it's coordinates and get updated values in it's Screen prefixed properties.
+
+[b][tt]Mode7Object.SetPosition[/tt][/b]
+[code=ags]void Mode7Object.SetPosition(float x, float y, float z)[/code]
+A helper function to setting the Object world position in a single line.
+
+[b][tt]Mode7Object.Draw[/tt][/b]
+[code=ags]void Mode7Object.Draw(DrawingSurface* ds)[/code]
+Draw the object in a DrawingSurface as it would look in a screen.
+
+[b][tt]Mode7Object.X[/tt][/b]
+[code=ags]float Mode7Object.X[/code]
+Object World X Position on the plane.
+
+[b][tt]Mode7Object.Y[/tt][/b]
+[code=ags]float Mode7Object.Y[/code]
+Object World Y Position, perpendicular to plane.
+
+[b][tt]Mode7Object.Z[/tt][/b]
+[code=ags]float Mode7Object.Z[/code]
+Object World Z Position, orthogonal to X position.
+
+[b][tt]Mode7Object.Factor[/tt][/b]
+[code=ags]float Mode7Object.Factor[/code]
+Object Scaling factor to it's graphics.
+
+[b][tt]Mode7Object.Angle[/tt][/b]
+[code=ags]float Mode7Object.Angle[/code]
+Object angle, parallel to plane, not used for rendering.
+
+[b][tt]Mode7Object.Graphic[/tt][/b]
+[code=ags]int Mode7Object.Graphic[/code]
+Object sprite slot, it's width and height is used to calculate the screen coordinates.
+
+[b][tt]Mode7Object.ScreenX[/tt][/b]
+[code=ags]int Mode7Object.ScreenX[/code]
+On-Screen Object X position when drawing, if visible. It's regular top, left coordinates, similar to GUI, assumes a Graphic is set.
+
+[b][tt]Mode7Object.ScreenY[/tt][/b]
+[code=ags]int Mode7Object.ScreenY[/code]
+On-Screen Object Y position when drawing, if visible. It's regular top, left coordinates, similar to GUI, assumes a Graphic is set.
+
+[b][tt]Mode7Object.ScreenWidth[/tt][/b]
+[code=ags]int Mode7Object.ScreenWidth[/code]
+On-Screen Object Width when drawing, if visible. It's adjusted by the sprite used in Graphic, projection and scaling factor.
+
+[b][tt]Mode7Object.ScreenHeight[/tt][/b]
+[code=ags]int Mode7Object.ScreenHeight[/code]
+On-Screen Object Height when drawing, if visible. It's adjusted by the sprite used in Graphic, projection and scaling factor.
+
+[b][tt]Mode7Object.ScreenVisible[/tt][/b]
+[code=ags]bool Mode7Object.ScreenVisible[/code]
+True if object should be drawn on screen. Gets set to false if object is culled when projecting.
+
+[b][tt]Mode7Object.ScreenZOrder[/tt][/b]
+[code=ags]int Mode7Object.ScreenZOrder[/code]
+ZOrder of the object when drawing on screen, smaller numbers are below, bigger numbers are on top.
