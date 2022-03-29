@@ -2283,10 +2283,10 @@
             <ScriptAndHeader_Script>
               <Script>
                 <FileName>Mode7.asc</FileName>
-                <Name />
-                <Description />
-                <Author />
-                <Version />
+                <Name>mode7</Name>
+                <Description>mode7 based on Khris AGS Kart</Description>
+                <Author>eri0o</Author>
+                <Version>0.1.0</Version>
                 <Key>561448884</Key>
                 <IsHeader>False</IsHeader>
               </Script>
