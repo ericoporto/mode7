@@ -147,6 +147,9 @@ struct Mode7World extends Mode7 {
   import void UpdateObjects();
   /// Draws only the objects in the screen sprite. You can use when you need to draw additional things between the ground and the objects. Or when you don't need the ground at all.
   import void DrawObjects();
+  
+  import void DrawObjectsOverlay();
+  
   /// Draws the ground sprite and the objects over it, in the screen sprite.
   import void DrawWorld();
   /// Gets a dynamic sprite with the world draw in top down view, useful for debugging.
@@ -154,6 +157,9 @@ struct Mode7World extends Mode7 {
   
   /// Let's you access a specific object in the mode7 world by it's index. Make sure to access a valid position.
   Mode7Object* Objects [MAX_OBJECTS];
+  
+  int OverlaysGraphic [MAX_OBJECTS];
+  Overlay* Overlays [MAX_OBJECTS];
   /// Gets how many objects are currently in the mode7 world.
   writeprotected int ObjectCount;  
   writeprotected int ObjectScreenVisibleCount;
