@@ -1,8 +1,8 @@
-[size=14pt][b]mode7[/b][/size] [color=gray][b] version 0.1.0 [/b][/color]
+[size=14pt][b]mode7[/b][/size] [color=gray][b] version 0.2.0 [/b][/color]
 
-[url=https://github.com/ericoporto/mode7/releases/download/0.1.0/mode7.scm]Get Latest Release [b]mode7.scm[/b][/url] | [url=https://github.com/ericoporto/mode7]GitHub Repo[/url] | [url=https://github.com/ericoporto/mode7/releases/download/0.1.0/mode7_demo_windows.zip]Demo Windows[/url] | [url=https://github.com/ericoporto/mode7/releases/download/0.1.0/mode7_demo_linux.tar.gz]Demo Linux[/url] | [url=https://github.com/ericoporto/mode7/archive/0.1.0.zip] Download project .zip [/url]
+[url=https://github.com/ericoporto/mode7/releases/download/0.2.0/mode7.scm]Get Latest Release [b]mode7.scm[/b][/url] | [url=https://github.com/ericoporto/mode7]GitHub Repo[/url] | [url=https://github.com/ericoporto/mode7/archive/0.2.0.zip] Download project .zip [/url]
 
-AGS Script Module for Mode7 like graphics.
+AGS Script Module for Mode7 like graphics. [url=https://ericoporto.github.io/mode7/][b]See demo in here![/b][/url] (Use Firefox, Safari or Chrome 100+, WASD to move)
 
 [img width=640 height=360]https://user-images.githubusercontent.com/2244442/160260167-0f6ab7a0-fd55-472a-839f-5332f3970476.gif[/img]
 
@@ -10,7 +10,7 @@ This module allows you to project a sprite on the screen with the visual aspect 
 
 If you want to do more, and also want to have other elements in it, similar to Mario Kart, you can leverage Mode7World and Mode7Object functionalities.
 
-This code is based on original code that was written by Khris and presented in [url=https://www.adventuregamestudio.co.uk/forums/index.php?topic=45834.msg636452606#msg636452606]this ags forum thread[/url]. I asked Khris for the original code, which was very Kart oriented, I refactored to what I thought was more generic and made this module in the hopes people could pick around the code and make games out of it!
+This code is based on original code that was written by [b]Khris[/b] and presented in [url=https://www.adventuregamestudio.co.uk/forums/index.php?topic=45834.msg636452606#msg636452606]this ags forum thread[/url]. I asked Khris for the original code, which was very Kart oriented, I refactored to what I thought was more generic and made this module in the hopes people could pick around the code and make games out of it!
 
 A note, the original code was a bit more performant, I pulled out some specific optimizations to make the code more flexible.
 
@@ -51,6 +51,18 @@ Target the camera to something.
 [code=ags]void Mode7.Draw()[/code]
 Draws the ground sprite and horizon rendered in the Screen sprite.
 
+[b][tt]Mode7.ResetGround[/tt][/b]
+[code=ags]void Mode7.ResetGround()[/code]
+Clears the screen sprite.
+
+[b][tt]Mode7.CameraAngleX[/tt][/b]
+[code=ags]float Mode7.CameraAngleX[/code]
+The camera angle that is normal to the ground plane (e.g.: up and down).
+
+[b][tt]Mode7.CameraAngleY[/tt][/b]
+[code=ags]float Mode7.CameraAngleY[/code]
+The camera angle that is on the ground plane (e.g.: left and right).
+
 [b][tt]Mode7.Screen[/tt][/b]
 [code=ags]DynamicSprite* Mode7.Screen[/code]
 The Dynamic Sprite that represents the screen where the Mode7 ground is draw to.
@@ -64,6 +76,10 @@ This is an extension of Mode7 and gives you tools to present billboard sprites, 
 [code=ags]Mode7Object* Mode7World.AddObject(int x, int z, float factor, int graphic)[/code]
 Adds an object, and sets it's x and z position. The y (vertical position) is always zero. You also must pass a scale factor and it's graphics.
 
+[b][tt]Mode7World.AddExternalObject[/tt][/b]
+[code=ags]void Mode7World.AddExternalObject(int x, int z, float factor, int graphic)[/code]
+Adds an external object that is not managed by the Mode7World. It will still be updated and draw, but removing it from the world will probably not garbage collect it.
+
 [b][tt]Mode7World.RemoveObject[/tt][/b]
 [code=ags]void Mode7World.RemoveObject(int object_i = -1)[/code]
 Remove a specific object from the world by it's index. If you don't pass a value, it will remove the last valid object added.
@@ -73,7 +89,7 @@ Remove a specific object from the world by it's index. If you don't pass a value
 Removes all objects from the Mode7 World.
 
 [b][tt]Mode7World.GetAngleObjectAndCamera[/tt][/b]
-[code=ags]int Mode7World.GetAngleObjectAndCamera(int object_i)[/code]
+[code=ags]int Mode7World.GetAngleObjectAndCamera(Mode7Object* m7obj)[/code]
 Returns the angle in degrees between the camera and whatever angle is set to a specific object, pointed by their index. Useful when you want to change the graphic of an object based on their relative angle.
 
 [b][tt]Mode7World.UpdateObjects[/tt][/b]
@@ -87,6 +103,10 @@ Draws only the objects in the screen sprite. You can use when you need to draw a
 [b][tt]Mode7World.DrawWorld[/tt][/b]
 [code=ags]void Mode7World.DrawWorld()[/code]
 Draws the ground sprite and the objects over it, in the screen sprite.
+
+[b][tt]Mode7World.DrawWorld2D[/tt][/b]
+[code=ags]DynamicSprite* Mode7World.DrawWorld2D()[/code]
+Gets a dynamic sprite with the world draw in top down view, useful for debugging.
 
 [b][tt]Mode7World.Objects[/tt][/b]
 [code=ags]writeprotected Mode7Object* Mode7World.Objects[i][/code]
@@ -148,6 +168,10 @@ Object angle, parallel to plane, not used for rendering.
 [code=ags]int Mode7Object.Graphic[/code]
 Object sprite slot, it's width and height is used to calculate the screen coordinates.
 
+[b][tt]Mode7Object.Visible[/tt][/b]
+[code=ags]bool Mode7Object.Visible[/code]
+Object visibility.
+
 [b][tt]Mode7Object.ScreenX[/tt][/b]
 [code=ags]int Mode7Object.ScreenX[/code]
 On-Screen Object X position when drawing, if visible. It's regular top, left coordinates, similar to GUI, assumes a Graphic is set.
@@ -172,3 +196,10 @@ True if object should be drawn on screen. Gets set to false if object is culled 
 [code=ags]int Mode7Object.ScreenZOrder[/code]
 ZOrder of the object when drawing on screen, smaller numbers are below, bigger numbers are on top.
 [/spoiler]
+
+This is just a quick initial release, I plan to update this soon with a better demo and polish the API and other stuff!
+
+[list]
+[li]v0.1.0 - initial release.[/li]
+[li]v0.2.0 - added ResetGround, CameraAngleX, CameraAngleY to Mode7, added Visible to Mode7Object, added AddExternalObject and DrawWorld2D to Mode7World, change GetAngleObjectAndCamera api.[/li]
+[/list]
