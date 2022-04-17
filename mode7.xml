@@ -3,6 +3,6 @@
   <Name>mode7</Name>                    <!-- set the module name -->
   <Description>Adventure Game Studio mode7 like graphics.</Description> <!-- set the module description -->
   <Author>eri0o, khris</Author>                <!-- set the module author -->
-  <Version>0.2.0</Version>             `<!-- set the module version -->
+  <Version>0.3.0</Version>             `<!-- set the module version -->
   <Key>561448884</Key>                  <!-- set the module unique key -->
 </AGSModule>
