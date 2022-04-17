@@ -1,5 +1,5 @@
 // new module header
-#define MAX_OBJECTS 512
+#define MAX_OBJECTS 2048
 
 enum eCameraTargetType {
   eCameraTarget_FollowBehind,
@@ -144,7 +144,7 @@ struct Mode7World extends Mode7 {
   /// Returns the angle in degrees between the camera and whatever angle is set to a specific object. Useful when you want to change the graphic of an object based on their relative angle.
   import int GetAngleObjectAndCamera(Mode7Object* m7obj);
   /// Update the screen transform of all objects world positions to their screen positions. You must call it before drawing any objects!
-  import void UpdateObjects();
+  import void UpdateObjects(bool do_sort = true);
   /// Draws only the objects in the screen sprite. You can use when you need to draw additional things between the ground and the objects. Or when you don't need the ground at all.
   import void DrawObjects();
   /// Draws objects as overlays, without rasterizing at the screen sprite.
