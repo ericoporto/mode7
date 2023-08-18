@@ -76,13 +76,17 @@ struct Mode7 {
   
   /// The camera angle that is normal to the ground plane (e.g.: up and down)
   import attribute float CameraAngleX;
+#ifndef SCRIPT_EXT_AGS4
   import float get_CameraAngleX(); //$AUTOCOMPLETEIGNORE$
   import void set_CameraAngleX(float value); //$AUTOCOMPLETEIGNORE$
+#endif
   
   /// The camera angle that is on the ground plane (e.g.: left and right)
   import attribute float CameraAngleY;
+#ifndef SCRIPT_EXT_AGS4
   import float get_CameraAngleY(); //$AUTOCOMPLETEIGNORE$
   import void set_CameraAngleY(float value); //$AUTOCOMPLETEIGNORE$
+#endif
   
   /// The Dynamic Sprite that represents the screen where the Mode7 ground is draw to 
   writeprotected DynamicSprite* Screen;  
